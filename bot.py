@@ -2,7 +2,10 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 import requests
-from config import DISCORD_TOKEN, TMDB_API_KEY
+import os
+
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
 GENRE_MAP = {
     "Action": 28,
