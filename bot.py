@@ -56,7 +56,6 @@ class MovieForm(discord.ui.Modal, title="🎬 Movie Preferences"):
 
     async def on_submit(self, interaction: discord.Interaction):
         await interaction.response.defer(thinking=True)
-
         try:
             filters = {
                 "genre": self.genre_val,
